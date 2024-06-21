@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <h1>Ticket Generator</h1>
+  <form action="/generate" method="POST">
+    <select name="office">
+      {% for office, code in office_codes.items() %}
+      <option value="{{ office }}">{{ office }}</option>
+      {% endfor %}
+    </select>
+    <button type="submit">Get Ticket</button>
+  </form>
+</body>
+</html>
